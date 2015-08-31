@@ -13,7 +13,7 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "rackt test --single-run --browsers Firefox",
+    "test": "jest",
     "start": "rackt server"
   },
   "authors": [
@@ -21,6 +21,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "jest-cli": "^0.5.0",
     "rackt-cli": "^0.4.0",
     "react": "^0.13.3"
   },
@@ -34,6 +35,13 @@
     "modal"
   ],
   "dependencies": {
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "react-tools": "*"
+  },
+  "jest": {
+    "scriptPreprocessor": "./lib/vendor/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "./node_modules/react"
+    ]
   }
 }

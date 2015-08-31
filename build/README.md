@@ -1,3 +1,0 @@
-# react-modal
-
-react component
