@@ -1,6 +1,4 @@
 var React         = require('react');
-var ReactPaginate = require('react-paginate');
-var classNames    = require('classnames');
 var _             = require('underscore');
 
 var ReactModal = React.createClass({
@@ -11,11 +9,11 @@ var ReactModal = React.createClass({
     beforeClose : React.PropTypes.func,
     afterOpen   : React.PropTypes.func,
     afterClose  : React.PropTypes.func,
-    loadStyle   : React.PropTypes.bool
+    loadStyle   : React.PropTypes.bool,
     //stylishProps
-    overlayOpacity: React.PropTypes.string //overlay
-    topZindex     : React.PropTypes.string //modal
-    animateModal  : React.PropTypes.bool //modal
+    overlayOpacity: React.PropTypes.string, //overlay
+    topZindex     : React.PropTypes.string, //modal
+    animateModal  : React.PropTypes.bool, //modal
     animationType : React.PropTypes.bool //modal
   },
 
