@@ -1,12 +1,20 @@
-import React from 'react';
-import ReactModal from '../../lib/index';
+var React = require('react');
+var ReactModal = require('../../lib/components/ReactModal');
 
-let App = React.createClass({
-  render() {
+var App = React.createClass({
+  showModal: function(){
+    this.refs.modalExample.show();
+  },
+
+  render: function() {
+    console.log('render');
     return (
       <div className="example">
-        <h1>react-modal</h1>
-        <ReactModal/>
+        <a onClick={this.showModal}>Click To Show Modal</a>
+
+        <ReactModal ref="modalExample">
+          dwucwu9duhg3vu893rv893rv89hrvh9u8
+        </ReactModal>
       </div>
     );
   }

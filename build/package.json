@@ -1,0 +1,31 @@
+{
+  "name": "react-modal",
+  "version": "0.0.0",
+  "description": "react component",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "homepage": "",
+  "bugs": "/issues",
+  "directories": {
+    "example": "examples"
+  },
+  "authors": [
+    "Stefano Cerelli"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.13.3"
+  },
+  "tags": [
+    "modal"
+  ],
+  "keywords": [
+    "modal"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}

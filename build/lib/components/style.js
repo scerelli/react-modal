@@ -1,7 +1,7 @@
-module.exports = {
-  overlay: {
+'use strict';
 
-  },
+module.exports = {
+  overlay: {},
 
   modal: {
     backgroundColor: 'black',
@@ -9,15 +9,11 @@ module.exports = {
 
   },
 
-  close: {
+  close: {},
 
-  },
-
-  animate: {
-
-  },
+  animate: {},
 
   fade: {
     border: 'red'
   }
-}
+};
