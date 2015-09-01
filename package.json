@@ -21,9 +21,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "babel-jest": "^5.3.0",
     "jest-cli": "^0.5.0",
+    "jquery": "^2.1.4",
     "rackt-cli": "^0.4.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-testutil-query": "^1.0.0",
+    "react-tools": "^0.13.3"
   },
   "peerDependencies": {
     "react": "^0.13.3"
@@ -39,9 +43,13 @@
     "react-tools": "*"
   },
   "jest": {
-    "scriptPreprocessor": "./lib/vendor/preprocessor.js",
+    "scriptPreprocessor": "../../node_modules/babel-jest",
+    "rootDir": "./lib/components",
     "unmockedModulePathPatterns": [
       "./node_modules/react"
+    ],
+    "moduleFileExtensions": [
+      "js"
     ]
   }
 }
