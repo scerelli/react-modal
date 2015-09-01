@@ -39,8 +39,9 @@
     "modal"
   ],
   "dependencies": {
-    "underscore": "^1.8.3",
-    "react-tools": "*"
+    "react-tools": "*",
+    "react.animate": "^1.0.0",
+    "underscore": "^1.8.3"
   },
   "jest": {
     "scriptPreprocessor": "../../node_modules/babel-jest",
