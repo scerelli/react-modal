@@ -1,6 +1,6 @@
 {
   "name": "react_modal",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "ReactModal is a simple component that provide an easy way to implement a modal dialog inside your projects. At the moment is not ready to being used.",
   "main": "./lib/index.js",
   "repository": {
