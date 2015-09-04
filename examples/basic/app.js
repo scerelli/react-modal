@@ -27,7 +27,6 @@ var App = React.createClass({
     return (
       <div className="example">
         <a onClick={this.showModal}>Click To Show Modal</a>
-
         <ReactModal ref="modalExample"
                     title="Test title modale"
                     beforeOpen={this.beforeOpen}
