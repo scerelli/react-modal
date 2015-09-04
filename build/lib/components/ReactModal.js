@@ -45,9 +45,6 @@ var ReactModal = React.createClass({
   },
 
   componentWillUpdate: function componentWillUpdate(nextProps, nextState) {
-    if (this.props.animModal) {
-      this.animate(nextState);
-    }
 
     if (nextState.isVisible && !this.state.isVisible && this.props.beforeOpen) {
       this.props.beforeOpen();
@@ -68,21 +65,37 @@ var ReactModal = React.createClass({
     }
   },
 
-  animate: function animate(nextState) {
-    var $modal = $(this.getDOMNode()).find('.react-modal__wrapper');
-    var opacity = nextState.isVisible ? 1 : 0;
+  animate: function animate(modalState) {
+    var $modal = $(this.getDOMNode()).find('.react-modal__wrapper, .react-modal__overlay');
+    var opacity = modalState ? 1 : 0;
+
+    if (modalState) {
+      this.setState({ isVisible: modalState });
+    }
 
     $modal.animate({
       opacity: opacity
-    }, this.props.animDuration);
+    }, this.props.animDuration, (function () {
+      if (!modalState) {
+        this.setState({ isVisible: false });
+      }
+    }).bind(this));
   },
 
   show: function show() {
-    this.setState({ isVisible: true });
+    if (this.props.animModal) {
+      this.animate(true);
+    } else {
+      this.setState({ isVisible: true });
+    }
   },
 
   hide: function hide() {
-    this.setState({ isVisible: false });
+    if (this.props.animModal) {
+      this.animate(false);
+    } else {
+      this.setState({ isVisible: false });
+    }
   },
 
   render: function render() {

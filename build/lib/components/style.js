@@ -7,6 +7,7 @@ module.exports = {
     left: 0,
     right: 0,
     bottom: 0,
+    opacity: 0,
     backgroundColor: 'rgba(0,0,0,0.4)',
     zIndex: 9998
   },
@@ -42,11 +43,5 @@ module.exports = {
     position: 'absolute',
     right: '16px',
     top: '16px'
-  },
-
-  animate: {},
-
-  fade: {
-    border: 'red'
   }
 };
