@@ -7,7 +7,6 @@ ReactModal is a simple and essential modal component for react.
 
 ### Implementation example
 
-
 ```
 var React = require('react');
 var ReactModal = require('../../lib/components/ReactModal');
@@ -53,7 +52,7 @@ var App = React.createClass({
 ```
 
 ### Props available
-```# React Modal [![Build Status](https://travis-ci.org/scerelli/react-modal.svg?branch=master)](https://travis-ci.org/scerelli/react-modal)
+# React Modal [![Build Status](https://travis-ci.org/scerelli/react-modal.svg?branch=master)](https://travis-ci.org/scerelli/react-modal)
 
 ```
 var React = require('react');
@@ -96,7 +95,8 @@ var Modal = React.createClass({
       </div>
     );
   }
-}); ```
+});
+```
 
 ``` title ```
 it accept string and defines the title to show in the header of modal.
