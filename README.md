@@ -96,17 +96,16 @@ var Modal = React.createClass({
       </div>
     );
   }
-});
-```
+}); ```
 
 ``` title ```
 it accept string and defines the title to show in the header of modal.
 
-```beforeOpen, beforeClose, afterOpen, afterClose```
+```beforeOpen, beforeClose, afterOpen, afterClose ```
 
 these callbacks speak by themeselves, when you have to do something before/after opening/closing the modal use these callbacks.
 
-```animDuration```
+```animDuration ```
 it takes an integer and it defines the animation duration while opening and closing modal
 
 ```animModal```
