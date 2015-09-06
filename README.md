@@ -62,5 +62,5 @@ these callbacks speak by themeselves, when you have to do something before/after
 ```animDuration ```
 it takes an integer and it defines the animation duration while opening and closing modal
 
-```animModal```
+``` animModal ```
 it defines if a modal must be or not animated while opening/closing it.
