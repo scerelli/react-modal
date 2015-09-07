@@ -84,18 +84,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    afterClose: React.PropTypes.func,
 	
 	    //stylishProps
-	    overlayOpacity: React.PropTypes.string, //overlay
-	    topZindex: React.PropTypes.string, //modal
-	    animModal: React.PropTypes.bool, //modal
-	    animName: React.PropTypes.string, //modal
+	    overlayOpacity: React.PropTypes.string,
+	    animModal: React.PropTypes.bool,
 	    animDuration: React.PropTypes.number
 	  },
 	
 	  getDefaultProps: function getDefaultProps() {
 	    return {
 	      title: '',
-	      loadStyle: true,
-	      animName: 'fade',
 	      animModal: true,
 	      animDuration: 300
 	
@@ -106,6 +102,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      isVisible: false
 	    };
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    $(document).on('keydown', (function (e) {
+	      if (e.keyCode == 27 && this.state.isVisible) {
+	        this.hide();
+	      }
+	    }).bind(this));
 	  },
 	
 	  componentWillUpdate: function componentWillUpdate(nextProps, nextState) {
@@ -160,6 +164,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      this.setState({ isVisible: false });
 	    }
+	  },
+	
+	  testfunc: function testfunc(e) {
+	    console.log(e);
 	  },
 	
 	  render: function render() {

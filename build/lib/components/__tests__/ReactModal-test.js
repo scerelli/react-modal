@@ -11,9 +11,11 @@ describe('ReactModal', function () {
   var node;
 
   function render() {
-    node = TestUtils.renderIntoDocument(React.createElement(
+    node = TestUtils.renderIntoDocument(
+    // animModal={false} for testing purpose this will change to on when test will be ready
+    React.createElement(
       ReactModal,
-      { title: "Lorem" },
+      { title: "Lorem", animModal: false },
       "Lorem Ipsum Doloret Sit Amet"
     ));
   }
