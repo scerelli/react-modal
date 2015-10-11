@@ -52,15 +52,20 @@ var Modal = React.createClass({
 
 ### Props available
 
-``` title ```
-it accept string and defines the title to show in the header of modal.
+`[string]` `title`
+It defines the title to show in the header of modal.
 
-```beforeOpen, beforeClose, afterOpen, afterClose ```
+`[func]` `beforeOpen, beforeClose, afterOpen, afterClose`
+These callbacks speak by themeselves: use them when you have to do something before/after opening/closing the modal.
 
-these callbacks speak by themeselves, when you have to do something before/after opening/closing the modal use these callbacks.
-
-```animDuration ```
+`[number]` `animDuration`
 it takes an integer and it defines the animation duration while opening and closing modal
 
-``` animModal ```
+`[bool]` `animModal`
 it defines if a modal must be or not animated while opening/closing it.
+
+`[string]` `closeIcon`
+if defined, it overrides the default svg icon that is supposed to close the modal when clicked.
+
+`[array]` `exitKeys`
+an array of keyboard keys that when pressed close the modal. By default, only key `27` (`Esc`) is given to the listener. It's possible disable this feature by giving an empty array.
